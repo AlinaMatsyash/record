@@ -1,3 +1,18 @@
+//
+// class SpeechScreen extends StatefulWidget {
+//   const SpeechScreen({Key? key}) : super(key: key);
+//
+//   @override
+//   _SpeechScreenState createState() => _SpeechScreenState();
+// }
+//
+// class _SpeechScreenState extends State<SpeechScreen> {
+//   @override
+//   Widget build(BuildContext context) {
+//     return Container();
+//   }
+// }
+
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
 import 'package:highlight_text/highlight_text.dart';
@@ -14,6 +29,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Voice',
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+          primarySwatch: Colors.red,
+          visualDensity: VisualDensity.adaptivePlatformDensity),
       home: SpeechScreen(),
     );
   }
@@ -25,6 +43,35 @@ class SpeechScreen extends StatefulWidget {
 }
 
 class _SpeechScreenState extends State<SpeechScreen> {
+  var listTrue = [
+    'да',
+    'а то',
+    'конечно',
+    'хорошо',
+    'ну да',
+    'ещё бы',
+    'разумеется',
+    'плюс',
+    'верно',
+    'безусловно',
+    'ага',
+    'ну конечно',
+    'это так',
+    'плюс'
+  ];
+  var listFalse = [
+    'нет',
+    'нетушки',
+    'нет-с',
+    'несть',
+    'и не подумаю',
+    'не-а',
+    'минус',
+    'плюс',
+    'отрицание',
+    'никак нет',
+    'вовсе нет',
+  ];
   final Map<String, HighlightedWord> _highlights = {
     'flutter': HighlightedWord(
       onTap: () => print('flutter'),
