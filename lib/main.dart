@@ -73,38 +73,17 @@ class _SpeechScreenState extends State<SpeechScreen> {
     'вовсе нет',
   ];
   final Map<String, HighlightedWord> _highlights = {
-    'flutter': HighlightedWord(
-      onTap: () => print('flutter'),
-      textStyle: const TextStyle(
-        color: Colors.blue,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-    'voice': HighlightedWord(
-      onTap: () => print('voice'),
+    'да': HighlightedWord(
+      onTap: () => print('да'),
       textStyle: const TextStyle(
         color: Colors.green,
         fontWeight: FontWeight.bold,
       ),
     ),
-    'subscribe': HighlightedWord(
-      onTap: () => print('subscribe'),
+    'нет': HighlightedWord(
+      onTap: () => print('нет'),
       textStyle: const TextStyle(
         color: Colors.red,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-    'like': HighlightedWord(
-      onTap: () => print('like'),
-      textStyle: const TextStyle(
-        color: Colors.blueAccent,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-    'comment': HighlightedWord(
-      onTap: () => print('comment'),
-      textStyle: const TextStyle(
-        color: Colors.green,
         fontWeight: FontWeight.bold,
       ),
     ),
